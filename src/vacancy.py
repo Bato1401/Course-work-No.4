@@ -1,4 +1,5 @@
 class Vacancy:
+    """Класс для создания объектов Вакансий"""
     __slots__ = ('name', 'firm', 'salary_from', 'salary_to', 'url', 'area')
 
     def __init__(self, name, firm, salary_from, salary_to, url, area):
