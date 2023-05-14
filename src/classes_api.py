@@ -57,13 +57,12 @@ class APIHeadHunter(APIData):
 
     @staticmethod
     def get_salary(sal: dict):
+        """Метод для учета курса доллара"""
         sal['salary']['from'] = 0 if sal['salary']['from'] is None else sal['salary']['from']
         sal['salary']['to'] = 0 if sal['salary']['to'] is None else sal['salary']['to']
         if sal['salary']['currency'].lower() == 'usd':
             sal['salary']['from'] = sal['salary']['from'] * USD
             sal['salary']['to'] = sal['salary']['to'] * USD
-
-
 
 
 class APISuperJob(APIData):
@@ -108,8 +107,3 @@ class APISuperJob(APIData):
         if sal['currency'].lower() == 'usd':
             sal['payment_from'] = sal['payment_from'] * USD
             sal['payment_to'] = sal['payment_to'] * USD
-
-
-# hh = APISuperJob('Python')
-# sj = hh.get_vacancies()
-# print(sj)
