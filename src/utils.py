@@ -5,6 +5,7 @@ from src.vacancy import Vacancy
 
 
 class ParsingError(Exception):
+    """Класс для вывода ошибки"""
     def __str__(self):
         return 'Ошибка получения данных'
 
